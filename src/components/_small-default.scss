@@ -1,0 +1,15 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 6rem;
+    grid-template-areas:    "header header"
+                            "article article"
+                            "footer footer";
+    margin: 0 auto;
+    padding:10px;
+    border: solid 1px #ccc;
+}
+
+.sidebar {
+    display: none;
+}

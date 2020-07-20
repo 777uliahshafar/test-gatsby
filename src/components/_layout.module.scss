@@ -1,13 +1,11 @@
-.container{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto auto 6rem;
-    grid-template-areas:    "header header"
-                            "article sidebar"
-                            "footer footer";
-    margin: 0 auto;
-    max-width: 960px;
-    padding:10px;
-    border: solid 1px #ccc;
+@import "small-default";
 
+//35em is also 560px (if basefont is 16px)
+@media only screen and (min-width: 35em) {
+	@import "medium";
 }
+
+//64em is also 1028px (if basefont is 16px)
+@media only screen and (min-width: 64em) {
+	@import "large";
+} 
