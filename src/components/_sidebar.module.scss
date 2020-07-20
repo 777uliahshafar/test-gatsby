@@ -5,10 +5,18 @@ container {
     width: $container-width;
     background-color: $color-pallete-6;
 
-    .sidebar {
-        margin: 0 auto;
+
+    .card {
+        margin: 0 $gutter;
         color: $color-pallete-4;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        padding: 0px 20px 0px 20px;
+        padding: 0px $gutter;
+        
+        h2 {
+          font-size: 1.12rem;
+          color:$secondaryColor;
+          font-weight: $normalWeight;
+        }
+      
       }
-}
+    }
