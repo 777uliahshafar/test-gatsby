@@ -1,8 +1,9 @@
 @import '../styles/variable';
 
-$footer-height: 100px;
+$footer-height: 100%;
 
 .container {
+  grid-area: footer;
   background-color: $color-pallete-3;
   width: $site-width;
   height: $footer-height;

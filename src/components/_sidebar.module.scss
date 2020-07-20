@@ -1,0 +1,14 @@
+@import '../styles/variable';
+
+container {
+    grid-area: sidebar;
+    width: $container-width;
+    background-color: $color-pallete-6;
+
+    .sidebar {
+        margin: 0 auto;
+        color: $color-pallete-4;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: 0px 20px 0px 20px;
+      }
+}

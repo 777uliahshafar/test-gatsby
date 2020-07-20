@@ -1,6 +1,7 @@
 @import '../styles/variable.scss';
 
 .container {
+    grid-area: header;
     max-width: $site-width;
     min-height: 140px;
     margin: 0 auto;
