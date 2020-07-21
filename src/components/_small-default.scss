@@ -11,6 +11,11 @@
                             "footer footer";
     margin: 0;
 
+    .content{
+        grid-area: article;
+        margin: 0.5rem $gutter;
+    }
+
 
 }
 
