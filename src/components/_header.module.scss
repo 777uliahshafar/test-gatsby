@@ -14,13 +14,13 @@
     }// end of row 
   
     .button {
-      background-color: $color-pallete-1;
+      background-color: $primaryColor;
       display: inline-block;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-family: $defaultFont;
       font-size: 12px;
       text-transform: uppercase;
       color: white;
-      font-weight: bold;
+      font-weight: $boldWeight;
       height: 30px;
       min-width: 15px;
       line-height: 30px;
@@ -61,11 +61,11 @@
     }
   
     .link {
-      color: $color-pallete-1;
+      color: $primaryColor;
       
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-family: $defaultFont;
       font-size: 17px;
-      font-weight: bold;
+      font-weight: $boldWeight;
       text-decoration: none;
   
       &:hover {

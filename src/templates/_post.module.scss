@@ -4,6 +4,8 @@
 
    .content {
       padding: 20px;
+      background-color: $secondaryColor ;
+      border-top: dotted .85px $primaryColor;
 
       h1 {
          color: $color-pallete-3;

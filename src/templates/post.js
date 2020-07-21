@@ -11,7 +11,7 @@ export default ({ data }) => {
       <Layout>
          <div className={styles.container}>
             <Title text={post.frontmatter.title}></Title>
-            <div style={{ width: '100%', height: '200px', backgroundColor: '#fafafa', backgroundImage: 'Url(https://source.unsplash.com/960x200/?' + post.frontmatter.keywords + ')', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', marginBottom: '30px' }}></div>
+            <div style={{ width: '100%', height: '200px', backgroundColor: '#fafafa', backgroundImage: 'Url(https://source.unsplash.com/960x200/?' + post.frontmatter.keywords + ')', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', marginBottom: '.5rem' }}></div>
             <div className={styles.content} dangerouslySetInnerHTML={{ __html: post.html }} />
          </div>
       </Layout>

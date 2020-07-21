@@ -2,18 +2,18 @@
 
 container {
     grid-area: sidebar;
-    background-color: $color-pallete-6;
+    background-color: $secondaryColor;
 
 
     .card {
       width: 100%-$gutterdbl;
-    margin: .5rem $gutter;
-        color: $color-pallete-4;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin: .5rem $gutter;
+      color: $fontColor;
+      font-family: $defaultFont;
         
         h2 {
           font-size: 1.12rem;
-          color:$secondaryColor;
+          color:$fontColor;
           font-weight: $normalWeight;
         }
       
