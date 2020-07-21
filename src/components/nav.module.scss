@@ -1,0 +1,30 @@
+@import '../styles/variable.scss';
+
+.container {
+    grid-area: links;
+    width: $container-width;
+    height: 100vh;
+    margin: 0 auto;
+    padding-top: .5rem;
+    margin-top: .5rem;
+    
+    .link {
+    color: $primaryColor;
+    font-family: $defaultFont;
+    font-size: 17px;
+    font-weight: $boldWeight;
+    display: block;
+    text-align: center;
+    margin: .5rem $gutter;
+    padding: .5rem;
+    background-color: $secondaryColor;
+    border-radius: .5rem;
+    color: $primaryColor;
+
+    &:hover {
+        color: $color-pallete-2;
+      }
+  
+    } //end of link
+
+}//end of container

@@ -65,11 +65,6 @@ export default () => (
           <SocialButton site="linkedin" username="evangeloper"></SocialButton>
           <SocialButton site="twitter" username="evangeloper"></SocialButton>
         </div>
-
-        <div className={styles.row}>
-          <HeaderLink to='/' text='Articles' />
-          <HeaderLink to='/about' text='About' />
-        </div>
       </header>
 
     )}
