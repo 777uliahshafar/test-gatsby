@@ -8,7 +8,7 @@ const Sidebar = () => (
     <container>
         
             <Card className={styles.card}>
-                <CardBody>
+                <CardBody >
                     <CardTitle className="text-center">
                         <h2>iklan</h2>
                     </CardTitle>

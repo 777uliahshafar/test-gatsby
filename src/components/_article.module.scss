@@ -1,13 +1,12 @@
 @import '../styles/variable';
 
 .article-box {
-  display: grid;
-  grid-template-columns: 150px auto;
-  grid-template-rows: auto;
-  grid-template-areas: "img text";
   grid-area: article;
-  width: $container-width;
-  margin-bottom: 30px;
+  width: 100%-$gutterdbl; 
+  margin: 0.5rem $gutter;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
   border-bottom: 1px dotted $color-pallete-6;
   transition: all 0.25s ease;
   box-shadow: inset 0 0 0 0 $color-pallete-4;
@@ -16,21 +15,19 @@
       cursor: pointer;
 
       @media screen and (min-width: 960px) {
-        box-shadow: inset $site-width 0 0 0 $color-pallete-7;
+        box-shadow: inset $container-width 0 0 0 $color-pallete-7;
       }
 
     }
 
     .left {
-      grid-area: img;
-      width: 150px;
+      margin: .5rem $gutter;
       height: 150px;
       background-color: $color-pallete-5;
     }
 
     .right {
-      grid-area: text;
-      padding: 15px;
+      padding: .5rem $gutter;
       color: $color-pallete-3;
       margin-top: -20px;
 

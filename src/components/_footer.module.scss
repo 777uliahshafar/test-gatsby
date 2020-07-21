@@ -5,7 +5,7 @@ $footer-height: 100%;
 .container {
   grid-area: footer;
   background-color: $color-pallete-3;
-  width: $site-width;
+  width: $container-width;
   height: $footer-height;
   position: relative;
   bottom: 0;
@@ -13,7 +13,7 @@ $footer-height: 100%;
 
     .footer {
       margin: 0 auto;
-      max-width: $site-width;
+      max-width: $container-width;
       height: $footer-height;
       line-height: $footer-height;
       color: $color-pallete-4;

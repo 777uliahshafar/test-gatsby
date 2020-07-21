@@ -1,15 +1,18 @@
+@import '../styles/variable';
+
+
 .container{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto 6rem;
+    grid-template-rows: 12rem auto auto 6rem;
     grid-template-areas:    "header header"
                             "article article"
+                            "sidebar sidebar"
                             "footer footer";
-    margin: 0 auto;
+    margin: 0;
     padding:10px;
     border: solid 1px #ccc;
+
+
 }
 
-.sidebar {
-    display: none;
-}
