@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import styles from './_nav.module.scss'
 
+
 //NavLink component
 
 const NavLink = props => (
