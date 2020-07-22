@@ -28,3 +28,32 @@
     } //end of link
 
 }//end of container
+
+/*----------Medium Screen--------- */
+
+//35em is also 560px (if basefont is 16px)
+@media only screen and (min-width: 35em) {
+
+  .nav-container {
+    display: grid;
+    grid-template-columns: repeat(12, 9rem);
+    height : auto;
+    background-color: $primaryColor;
+
+    .row {
+      width: auto;
+      text-align: center;
+      padding: 5px;
+    }
+
+    .link{
+      display:inline;
+      color: $fontColor;
+      background-color: transparent;
+      
+    }
+
+  }//end of navContainer
+
+
+}//end of media query
