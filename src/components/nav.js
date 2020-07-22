@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
-import styles from './nav.module.scss'
+import styles from './_nav.module.scss'
 
 //NavLink component
 
@@ -24,7 +24,7 @@ export default () => (
     `}
 
         render={data => (
-            <nav className={styles.container}>
+            <nav className={styles.navContainer}>
                 <div className={styles.row}>
                     <NavLink to='/' text='Articles' />
                     <NavLink to='/about' text='About' />
