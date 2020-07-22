@@ -2,11 +2,6 @@ import React from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import styles from './_header.module.scss'
 
-//HeaderLink component
-
-const HeaderLink = props => (
-  <Link className={styles.link} to={props.to}>{props.text}</Link>
-)
 
 //HomeButton component
 
