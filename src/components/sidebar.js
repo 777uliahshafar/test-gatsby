@@ -5,7 +5,7 @@ import styles from './_sidebar.module.scss'
 
 
 const Sidebar = () => (
-    <container>
+    <sidebar className={styles.container}>
         
             <Card className={styles.card}>
                 <CardBody >
@@ -15,7 +15,7 @@ const Sidebar = () => (
                     <img src="https://via.placeholder.com/320x200" alt="Iklan" style={{width:"80%"}}/>
                 </CardBody>
             </Card>
-            </container>
+            </sidebar>
 
         
 )
