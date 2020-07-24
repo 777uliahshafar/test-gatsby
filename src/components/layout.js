@@ -4,11 +4,13 @@ import Header from './header.js'
 import Footer from './footer.js'
 import Sidebar from './sidebar'
 import Nav from './nav'
+import App from './app';
 
 
 export default ({children}) => (
     <div className={styles.container}>
-        <Header/>
+        <App />
+        <Header/>     
         <Nav />
 
             <div className={styles.content}>

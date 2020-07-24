@@ -16,6 +16,7 @@ module.exports = {
   /* All plugin*/
   plugins:  [
     'gatsby-plugin-sass',
+    `gatsby-plugin-styled-components`,
 
     {
         resolve: 'gatsby-source-filesystem',

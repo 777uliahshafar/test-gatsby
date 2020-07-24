@@ -14,11 +14,13 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "babel-plugin-styled-components": "^1.10.7",
     "bootstrap": "^4.5.0",
     "gatsby": "^2.23.12",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-sass": "^2.3.12",
     "gatsby-plugin-sharp": "^2.6.19",
+    "gatsby-plugin-styled-components": "^3.3.10",
     "gatsby-remark-images": "^3.3.19",
     "gatsby-remark-relative-images": "^0.3.0",
     "gatsby-source-filesystem": "^2.3.19",
@@ -26,7 +28,8 @@
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "reactstrap": "^8.5.1"
+    "reactstrap": "^8.5.1",
+    "styled-components": "^5.1.1"
   },
   "devDependencies": {
     "prettier": "2.0.5"
