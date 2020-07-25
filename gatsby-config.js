@@ -10,6 +10,8 @@ module.exports = {
   /* Your data query */
   siteMetadata: {
     title:'Gatsby blog',
+    author: 'Uliah Shafar',
+    publisher: 'Cepa Publishing'
   },
 
 
