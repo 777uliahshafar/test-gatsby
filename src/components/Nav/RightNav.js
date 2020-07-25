@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 
 const NavLink = props => (
-  <Link className={styled.link} to={props.to}>{props.text}</Link>
+  <Link to={props.to}>{props.text}</Link>
 )
 
 const Ul = styled.ul`
