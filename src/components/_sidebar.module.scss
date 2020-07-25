@@ -3,8 +3,14 @@
 .container {
     grid-area: sidebar;
     background-color: $secondaryColor;
-
-
+    
+    padding: 1.5rem 0.5rem;
+    a{
+      display: flex;
+      flex-flow: row;
+      color: $fontColor;
+    }
+  
     .card {
       width: 100%-$gutterdbl;
       margin: .5rem $gutter;
