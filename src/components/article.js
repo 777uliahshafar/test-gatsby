@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from 'gatsby'
 import styles from  './_article.module.scss'
 import Img from 'gatsby-image'
+import { slugify } from '../util/utilityFunction.js'
 
 const Article = ({ path, title, date, excerpt, fluid, tags }) => {
    return(
@@ -18,10 +19,14 @@ const Article = ({ path, title, date, excerpt, fluid, tags }) => {
             <div>
                {excerpt}
             </div>
+            <div className={styles.tags}>
+               {tags.map(tag => (
+                  <Link to={`/tag/${slugify(tag)}`}>{tag}</Link> 
+               ))}         
+            </div>
             <div className={styles.more}>
                <Link to={path}>Read More</Link> 
             </div>
-            {tags}
          </div>
       </article>
    )
