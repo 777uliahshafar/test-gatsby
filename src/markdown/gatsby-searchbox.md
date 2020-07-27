@@ -1,7 +1,7 @@
 ---
 title: "Searchbox will come soon"
 date: "2019-02-02"
-image: "https://source.unsplash.com/150x150/?gatsbyjs"
+image: ../images/howl650.jpg
 featured: true
 ---
 

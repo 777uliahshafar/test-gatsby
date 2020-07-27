@@ -1,7 +1,7 @@
 ---
 title: "I am a header of blog"
 date: "2019-01-10"
-image: "https://source.unsplash.com/150x150/?gatsbyjs"
+image: ../images/howl650.jpg
 featured: true
 ---
 

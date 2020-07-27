@@ -1,7 +1,7 @@
 ---
 title: "Welcome to my new Gatsby blog!"
 date: "2019-01-01"
-image: "https://source.unsplash.com/150x150/?welcome"
+image: ../images/howl650.jpg
 keywords: "developers"
 ---
 

@@ -20,7 +20,6 @@ export default () => (
                     id
                   frontmatter{
                     title
-                    image
                     date(formatString: "MMMM YYYY")
                   }
                   excerpt

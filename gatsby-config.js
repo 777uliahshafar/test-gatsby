@@ -24,6 +24,8 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
   },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     'gatsby-plugin-sass',
     `gatsby-plugin-styled-components`,
 
@@ -34,8 +36,7 @@ module.exports = {
           path: `${__dirname}/src/markdown`,
         },
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
+    
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -44,7 +45,7 @@ module.exports = {
               {
                   resolve: 'gatsby-remark-images',
                   options: {
-                      maxWidth: 750,
+                      maxWidth: 300,
                       linkImagesToOriginal: false
                   },
               },

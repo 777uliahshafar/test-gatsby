@@ -1,13 +1,13 @@
 import React from 'react'
 import {Link} from 'gatsby'
 import styles from  './_article.module.scss'
+import Img from 'gatsby-image'
 
-
-const Article = ({ path, keyword, title, date, excerpt }) => {
+const Article = ({ path, title, date, excerpt, fluid }) => {
    return(
       <article className={styles.articleBox}>
          <div className={styles.left}>
-            <img src={'https://source.unsplash.com/150x150/?' + keyword} alt={title} />
+            <Img fluid={fluid} alt={title} />
          </div>
          <div className={styles.right}>
             <h3>

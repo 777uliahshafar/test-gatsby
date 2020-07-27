@@ -1,7 +1,7 @@
 ---
 title: "Burgermenu gatsby is powerful"
 date: "2019-01-23"
-image: "https://source.unsplash.com/150x150/?gatsbyjs"
+image: ../images/howl650.jpg
 featured: true
 ---
 

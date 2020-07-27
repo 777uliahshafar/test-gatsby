@@ -1,7 +1,7 @@
 ---
 title: "footer gatsby on the bottom"
 date: "2019-01-07"
-image: "https://source.unsplash.com/150x150/?gatsbyjs"
+image: ../images/howl650.jpg
 featured: true
 ---
 

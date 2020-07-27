@@ -1,7 +1,7 @@
 ---
 title: "Pagination is complicated"
 date: "2019-01-25"
-image: "https://source.unsplash.com/150x150/?gatsbyjs"
+image: ../images/howl650.jpg
 featured: true
 ---
 
