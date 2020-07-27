@@ -11,7 +11,7 @@ const Article = ({ path, keyword, title, date, excerpt }) => {
          </div>
          <div className={styles.right}>
             <h3>
-               {title}
+             <Link to={path}>{title}</Link>
             </h3>
             <div className={styles.date}>{date}
             </div>
@@ -19,7 +19,7 @@ const Article = ({ path, keyword, title, date, excerpt }) => {
                {excerpt}
             </div>
             <div className={styles.more}>
-            <Link to={path}>Read More</Link>
+               <Link to={path}>Read More</Link>
             </div>
          </div>
       </article>
