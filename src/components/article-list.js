@@ -14,7 +14,8 @@ const IndexPage = () => (
                     title={node.frontmatter.title}
                     date={node.frontmatter.date}
                     excerpt={node.excerpt} 
-                    fluid={node.frontmatter.image.childImageSharp.fluid} />
+                    fluid={node.frontmatter.image.childImageSharp.fluid}
+                    tags={node.frontmatter.tags} />
             ))}
         </div>
 
@@ -40,6 +41,7 @@ const indexQuery = graphql`
           id 
           frontmatter {
             title
+            tags
             image{
               childImageSharp{
                 fluid(maxWidth:750, maxHeight: 150){

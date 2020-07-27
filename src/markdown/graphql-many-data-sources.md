@@ -3,6 +3,9 @@ title: "One GraphQL, many data sources"
 date: "2019-01-04"
 image: ../images/howl650.jpg
 featured: true
+tags:
+- two
+- three
 ---
 
 

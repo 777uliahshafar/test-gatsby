@@ -3,6 +3,9 @@ title: "Pagination is complicated"
 date: "2019-01-25"
 image: ../images/howl650.jpg
 featured: true
+tags:
+- one
+- two
 ---
 
 #If you are reading this, you know Gatsby is awesome!

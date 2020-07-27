@@ -3,6 +3,9 @@ title: "I am a header of blog"
 date: "2019-01-10"
 image: ../images/howl650.jpg
 featured: true
+tags:
+- one
+- two
 ---
 
 #If you are reading this, you know Gatsby is awesome!

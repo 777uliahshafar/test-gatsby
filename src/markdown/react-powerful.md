@@ -3,6 +3,9 @@ title: "React is powerful"
 date: "2019-01-03"
 image: ../images/howl650.jpg
 keywords: "javascript"
+tags:
+- two
+- three
 ---
 
 #Learn why React is so powerful

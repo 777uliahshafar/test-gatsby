@@ -3,6 +3,9 @@ title: "Searchbox will come soon"
 date: "2019-02-02"
 image: ../images/howl650.jpg
 featured: true
+tags:
+- one
+- three
 ---
 
 #If you are reading this, you know Gatsby is awesome!

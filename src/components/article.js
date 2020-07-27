@@ -3,7 +3,7 @@ import {Link} from 'gatsby'
 import styles from  './_article.module.scss'
 import Img from 'gatsby-image'
 
-const Article = ({ path, title, date, excerpt, fluid }) => {
+const Article = ({ path, title, date, excerpt, fluid, tags }) => {
    return(
       <article className={styles.articleBox}>
          <div className={styles.left}>
@@ -19,8 +19,9 @@ const Article = ({ path, title, date, excerpt, fluid }) => {
                {excerpt}
             </div>
             <div className={styles.more}>
-               <Link to={path}>Read More</Link>
+               <Link to={path}>Read More</Link> 
             </div>
+            {tags}
          </div>
       </article>
    )

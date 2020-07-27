@@ -3,6 +3,9 @@ title: "Burgermenu gatsby is powerful"
 date: "2019-01-23"
 image: ../images/howl650.jpg
 featured: true
+tags:
+- one
+- three
 ---
 
 #If you are reading this, you know Gatsby is awesome!

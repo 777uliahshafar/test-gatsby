@@ -3,6 +3,9 @@ title: "footer gatsby on the bottom"
 date: "2019-01-07"
 image: ../images/howl650.jpg
 featured: true
+tags:
+- one
+- three
 ---
 
 #If you are reading this, you know Gatsby is awesome!
