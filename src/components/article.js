@@ -18,7 +18,9 @@ const Article = ({ path, keyword, title, date, excerpt }) => {
             <div>
                {excerpt}
             </div>
+            <div className={styles.more}>
             <Link to={path}>Read More</Link>
+            </div>
          </div>
       </article>
    )
