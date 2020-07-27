@@ -17,6 +17,13 @@ module.exports = {
 
   /* All plugin*/
   plugins:  [
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: `${__dirname}/src/images`,
+      },
+  },
     'gatsby-plugin-sass',
     `gatsby-plugin-styled-components`,
 
@@ -27,6 +34,7 @@ module.exports = {
           path: `${__dirname}/src/markdown`,
         },
     },
+    'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-transformer-remark',
