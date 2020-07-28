@@ -46,8 +46,12 @@
           margin-top: .5rem;
           margin-bottom: 1rem;
           text-decoration: underline;
-          
+          list-style: none;
+          display: flex;
+
+      
           a{
+            padding-right: .5rem;
             margin: .5rem $gutter;
             color: $color-pallete-3;
           }
