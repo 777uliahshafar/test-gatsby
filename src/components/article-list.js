@@ -9,7 +9,7 @@ const IndexPage = () => (
       <div>
             {data.allMarkdownRemark.edges.map(({ node }) => (
                 <Article key={node.id}
-                    path={node.fields.slug}
+                    slug={node.fields.slug}
                     keyword={node.frontmatter.keyword}
                     title={node.frontmatter.title}
                     date={node.frontmatter.date}

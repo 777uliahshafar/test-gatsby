@@ -4,7 +4,7 @@ import styles from './_article.module.scss'
 import Img from 'gatsby-image'
 import { slugify } from '../util/utilityFunction.js'
 
-const Article = ({ path, title, date, excerpt, fluid, tags }) => {
+const Article = ({ slug, title, date, excerpt, fluid, tags }) => {
    return (
       <article className={styles.articleBox}>
          <div className={styles.left}>
@@ -12,7 +12,7 @@ const Article = ({ path, title, date, excerpt, fluid, tags }) => {
          </div>
          <div className={styles.right}>
             <h3>
-               <Link to={path}>{title}</Link>
+               <Link to={slug}>{title}</Link>
             </h3>
             <div className={styles.date}>{date}
             </div>
@@ -29,7 +29,7 @@ const Article = ({ path, title, date, excerpt, fluid, tags }) => {
                </ul>
             </div>
             <div className={styles.more}>
-               <Link to={path}>Read More</Link>
+               <Link to={slug}>Read More</Link>
             </div>
          </div>
       </article>
