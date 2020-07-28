@@ -1,5 +1,6 @@
 const { createFilePath } = require('gatsby-source-filesystem')
 const path = require('path')
+const _ = require('lodash')
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
    if (node.internal.type === 'MarkdownRemark') {
@@ -27,6 +28,9 @@ exports.createPages = ({ graphql, actions }) => {
                    fields {
                       slug
                    }
+                   frontmatter{
+                      tags
+                   }
                 }
              }
           }
@@ -40,8 +44,36 @@ exports.createPages = ({ graphql, actions }) => {
                   slug: node.fields.slug,
                 },
               })
+
+            //Get all Tags
+             let tags = []
+             _.each(result.data.allMarkdownRemark.edges, edge => {
+                if (_.get(edge, 'node.frontmatter.tags')) {
+                   tags = tags.concat(edge.node.frontmatter.tags)
+                }
+
+             })
+
+             let tagPostCounts = {}
+             tags.forEach(tag => {
+                tagPostCounts[tag] = (tagPostCounts[tag] || 0) + 1;
+             })
+
+             tags = _.uniq(tags)
+
+             createPage({
+               path: `/tags`,
+               component: path.resolve('./src/templates/post-tags.js'),
+               context: {
+                  tags,
+                  tagPostCounts,
+                },
+             })
+
           })
           resolve()
        })
+
+
     })
  }

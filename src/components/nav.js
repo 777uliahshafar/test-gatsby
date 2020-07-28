@@ -29,6 +29,7 @@ export default () => (
                 <div className={styles.row}>
                     <NavLink to='/' text='Articles' />
                     <NavLink to='/about' text='About' />
+                    <NavLink to='/tags' text='Tags' />
                 </div>
             </nav>
 
