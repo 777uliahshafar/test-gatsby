@@ -1,6 +1,37 @@
 @import '../styles/variable';
 
 .container {
+   
+   .topContent{
+      display: flex;
+      
+
+      div{
+         flex-basis: 50%;
+      }
+
+      /*------ list tags styles ------*/
+
+      li{
+         display: inline-block;
+         list-style: none;
+         a {color: $fontColor; padding-right: .5rem;cursor: pointer;}
+      }
+
+      li:first-child:before{
+         content: "Tags: ";
+         color: $fontColor;
+      }
+
+      li:after{
+         content: ", ";
+         color: $fontColor;
+      }
+
+      li:last-child:after {
+         content: " ";
+         }
+   }//end of topContent
 
    .content {
       padding: 20px;
