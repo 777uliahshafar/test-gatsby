@@ -1,5 +1,6 @@
 const { createFilePath } = require('gatsby-source-filesystem')
 const path = require('path')
+const { slugify } = require('./src/util/utilityFunction')
 const _ = require('lodash')
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -60,7 +61,7 @@ exports.createPages = ({ graphql, actions }) => {
              })
 
              tags = _.uniq(tags)
-
+            //Create tags page
              createPage({
                path: `/tags`,
                component: path.resolve('./src/templates/post-tags.js'),
@@ -69,6 +70,18 @@ exports.createPages = ({ graphql, actions }) => {
                   tagPostCounts,
                 },
              })
+            
+             //Create tag posts
+            tags.forEach(tag => {
+               createPage({
+                  path: `/tag/${slugify(tag)}`,
+                  component: path.resolve('./src/templates/tag-posts.js'),
+                  context: {
+                     tag,
+                   },
+                })
+            })
+
 
           })
           resolve()

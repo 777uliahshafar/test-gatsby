@@ -14,7 +14,7 @@ const tagsPost = ({ pageContext }) => {
             <ul>
                 {tags.map(tag => (
                     <li key={tag}>
-                        <Link to={`/tag/${slugify(tag)}`}>{tag}</Link>
+                        <Link to={`/tag/${slugify(tag)}`}>{tag}</Link>&nbsp; 
                         {tagPostCounts[tag]}
                     </li>
                 ))}
