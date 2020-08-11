@@ -46,6 +46,31 @@ exports.createPages = ({ graphql, actions }) => {
                 },
               })
 
+            // Create posts pagination pages
+            const articlesPerPage = 4
+            const numberOfPages = Math.ceil(result.data.allMarkdownRemark.edges.length / articlesPerPage)
+
+            Array.from({ length: numberOfPages }).forEach((_, index) => {
+               const isFirstPage = index === 0
+               const currentPage = index + 1
+
+               if (isFirstPage) return
+
+               createPage({
+                  path: `/page/${currentPage}`,
+                  component: path.resolve('./src/templates/articles-list.js'),
+                  context: {
+                    limit: articlesPerPage,
+                    skip: index * articlesPerPage,
+                    numberOfPages: numberOfPages,
+                    currentPage: currentPage,
+                  },
+                })
+            })
+               
+
+
+            
             //Get all Tags
              let tags = []
              _.each(result.data.allMarkdownRemark.edges, edge => {
@@ -71,6 +96,8 @@ exports.createPages = ({ graphql, actions }) => {
                 },
              })
             
+             //end of tags page
+
              //Create tag posts
             tags.forEach(tag => {
                createPage({
@@ -81,6 +108,7 @@ exports.createPages = ({ graphql, actions }) => {
                    },
                 })
             })
+            //end of tag post
 
 
           })
