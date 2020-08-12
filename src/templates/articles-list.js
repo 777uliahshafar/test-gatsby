@@ -2,11 +2,12 @@ import React from 'react'
 import Layout from '../components/layout'
 import Title from '../components/title'
 import Article from '../components/article'
+import PaginationLinks from '../components/pagination-links.js'
 import { graphql } from 'gatsby'
 
 const articlesList = props => {
     const articles = props.data.allMarkdownRemark.edges
-    const { currentPage } = props.pageContext
+    const { currentPage , numberOfPages } = props.pageContext
 
     return(
         <Layout>
@@ -21,6 +22,7 @@ const articlesList = props => {
                 fluid={node.frontmatter.image.childImageSharp.fluid}
                 tags={node.frontmatter.tags} />
             ))}
+            <PaginationLinks currentPage={currentPage} numberOfPages={numberOfPages}/>
         </Layout>
     )
 }
