@@ -8,7 +8,7 @@ import { slugify } from '../util/utilityFunction.js'
 
 const SinglePost = ({ data }) => {
   const post = data.markdownRemark
-
+  const baseUrl = 'https://http://determined-shirley-3a40e7.netlify.app'
   return (
     <Layout>
        <div className={styles.container}>
@@ -29,6 +29,61 @@ const SinglePost = ({ data }) => {
           </div>
           <div style={{ width: '100%', height: '200px', backgroundColor: '#fafafa', backgroundImage: 'Url(https://source.unsplash.com/960x200/?' + post.frontmatter.keywords + ')', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', marginBottom: '.5rem' }}></div>
           <div className={styles.content} dangerouslySetInnerHTML={{ __html: post.html }} />
+          <h3>Share This Post</h3>
+          <div>
+            <ul>
+            <li>
+              <a
+                href={
+                  'https://www.facebook.com/sharer/sharer.php?u=' +
+                  baseUrl +
+                  pageContext.slug
+                }
+                className="facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fab fa-facebook-f fa-2x" />
+              </a>
+            </li>
+
+            <li>
+            <a
+              href={
+                'https://twitter.com/share?url=' +
+                baseUrl +
+                pageContext.slug +
+                '&text=' +
+                post.title +
+                '&via' +
+                'twitterHandle'
+              }
+              className="twitter"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fab fa-twitter fa-2x" />
+            </a>
+          </li>
+
+          <li>
+            <a
+              href={
+                'https://www.linkedin.com/shareArticle?url=' +
+                baseUrl +
+                pageContext.slug
+              }
+              className="linkedin"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fab fa-linkedin fa-2x" />
+            </a>
+          </li>
+
+
+            </ul>
+          </div>
        </div>
     </Layout>
   )
