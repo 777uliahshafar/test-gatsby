@@ -6,9 +6,9 @@ import styles from './_post.module.scss'
 import { slugify } from '../util/utilityFunction.js'
 
 
-const SinglePost = ({ data }) => {
+const SinglePost = ({ data , pageContext }) => {
   const post = data.markdownRemark
-  const baseUrl = 'https://http://determined-shirley-3a40e7.netlify.app'
+  const baseUrl = 'http://determined-shirley-3a40e7.netlify.app'
   return (
     <Layout>
        <div className={styles.container}>
@@ -30,7 +30,7 @@ const SinglePost = ({ data }) => {
           <div style={{ width: '100%', height: '200px', backgroundColor: '#fafafa', backgroundImage: 'Url(https://source.unsplash.com/960x200/?' + post.frontmatter.keywords + ')', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', marginBottom: '.5rem' }}></div>
           <div className={styles.content} dangerouslySetInnerHTML={{ __html: post.html }} />
           <h3>Share This Post</h3>
-          <div>
+          <div className={styles.botContent}>
             <ul>
             <li>
               <a

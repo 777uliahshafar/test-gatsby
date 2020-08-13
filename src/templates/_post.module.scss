@@ -65,6 +65,40 @@
          text-align: justify;
       }
 
-   }
+   }//end of content
 
-}
+   .botContent{
+      ul {
+         display: inline-flex;
+         list-style: none;
+         margin: 20px auto;
+     
+         li {
+           margin: auto 20px;
+     
+           a {
+             opacity: 0.6;
+             transition: all 0.1s ease-in;
+             &:hover {
+               opacity: 1;
+             }
+             &.facebook {
+               color: rgb(66, 103, 178);
+             }
+             &.twitter {
+               color: rgb(56, 161, 243);
+             }
+             &.google {
+               color: rgb(221, 75, 57);
+             }
+             &.linkedin {
+               color: rgb(0, 119, 181);
+             }
+           }
+         }
+       }
+
+
+   }//end of bottom content
+
+}//end of bottom container
