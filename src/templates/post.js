@@ -29,8 +29,8 @@ const SinglePost = ({ data , pageContext }) => {
           </div>
           <div style={{ width: '100%', height: '200px', backgroundColor: '#fafafa', backgroundImage: 'Url(https://source.unsplash.com/960x200/?' + post.frontmatter.keywords + ')', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', marginBottom: '.5rem' }}></div>
           <div className={styles.content} dangerouslySetInnerHTML={{ __html: post.html }} />
-          <h3>Share This Post</h3>
           <div className={styles.botContent}>
+            <h3> Share:</h3>
             <ul>
             <li>
               <a
