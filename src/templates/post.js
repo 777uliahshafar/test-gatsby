@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql , Link } from 'gatsby'
 import Layout from '../components/layout'
 import Title from '../components/title'
+import Comments from '../components/comment.js'
 import styles from './_post.module.scss'
 import { slugify } from '../util/utilityFunction.js'
 
@@ -83,7 +84,11 @@ const SinglePost = ({ data , pageContext }) => {
 
 
             </ul>
+            
           </div>
+          <Comments slug={post.fields.slug} comments={data.allCommentsYaml.edges} />
+
+          
        </div>
     </Layout>
   )
@@ -91,8 +96,12 @@ const SinglePost = ({ data , pageContext }) => {
 
 
 export const query = graphql`
-  query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+  query(
+      $slug: String!
+    ) {
+    markdownRemark(
+    fields: { slug: { eq: $slug } }
+    ) {
       html
       frontmatter {
         title
@@ -106,6 +115,22 @@ export const query = graphql`
           }
         }
         date(formatString: "MMMM YYYY")
+      }
+      fields {
+        slug
+      }
+    }
+    allCommentsYaml (
+      filter: { slug: { eq: $slug } }
+    ) {
+      edges {
+        node {
+          _id
+          name
+          email
+          message
+          date
+        } 
       }
     }
   }
