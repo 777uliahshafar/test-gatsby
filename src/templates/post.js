@@ -7,8 +7,9 @@ import styles from './_post.module.scss'
 import { slugify } from '../util/utilityFunction.js'
 
 
-const SinglePost = ({ data , pageContext }) => {
+const SinglePost = ({ data , pageContext , props }) => {
   const post = data.markdownRemark
+  const comments = data.allCommentsYaml
   const baseUrl = 'http://determined-shirley-3a40e7.netlify.app'
   return (
     <Layout>
@@ -86,7 +87,7 @@ const SinglePost = ({ data , pageContext }) => {
             </ul>
             
           </div>
-          <Comments slug={post.fields.slug} comments={data.allCommentsYaml.edges} />
+          <Comments slug={post.fields.slug} comments={comments.edges} />
 
           
        </div>
@@ -123,14 +124,14 @@ export const query = graphql`
     allCommentsYaml (
       filter: { slug: { eq: $slug } }
     ) {
-      edges {
-        node {
-          _id
+      edges{
+        node{
+          id
           name
           email
           message
           date
-        } 
+        }
       }
     }
   }

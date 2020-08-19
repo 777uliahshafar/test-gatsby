@@ -28,6 +28,14 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-plugin-sass',
     `gatsby-plugin-styled-components`,
+    'gatsby-transformer-yaml',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'comments',
+        path: `${__dirname}/_data/comments`,
+      },
+    },
 
     {
         resolve: 'gatsby-source-filesystem',
