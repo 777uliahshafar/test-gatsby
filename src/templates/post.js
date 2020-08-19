@@ -7,7 +7,7 @@ import styles from './_post.module.scss'
 import { slugify } from '../util/utilityFunction.js'
 
 
-const SinglePost = ({ data , pageContext , props }) => {
+const SinglePost = ({ data , pageContext }) => {
   const post = data.markdownRemark
   const comments = data.allCommentsYaml
   const baseUrl = 'http://determined-shirley-3a40e7.netlify.app'
