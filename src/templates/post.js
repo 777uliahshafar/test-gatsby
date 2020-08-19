@@ -126,7 +126,7 @@ export const query = graphql`
     ) {
       edges{
         node{
-          id
+          _id
           name
           email
           message
