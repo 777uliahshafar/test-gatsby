@@ -7,7 +7,7 @@ const Comments = (props) => {
       <form
         className={s.form}
         method="POST"
-        action="https://komentar-cepa.herokuapp.com/v2/entry/777uliahshafar/gatsbyBlogonline/comment/comments"
+        action="https://komentar-cepa.herokuapp.com/v2/entry/777uliahshafar/gatsbyBlogonline/master/comments"
       >
         <input
           name="fields[slug]"
