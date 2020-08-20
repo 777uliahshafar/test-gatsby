@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql , Link } from 'gatsby'
 import Layout from '../components/layout'
 import Title from '../components/title'
+import SocialShare from '../components/social-share'
 import Comments from '../components/comment.js'
 import styles from './_post.module.scss'
 import { slugify } from '../util/utilityFunction.js'
@@ -31,62 +32,9 @@ const SinglePost = ({ data , pageContext }) => {
           </div>
           <div style={{ width: '100%', height: '200px', backgroundColor: '#fafafa', backgroundImage: 'Url(https://source.unsplash.com/960x200/?' + post.frontmatter.keywords + ')', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', marginBottom: '.5rem' }}></div>
           <div className={styles.content} dangerouslySetInnerHTML={{ __html: post.html }} />
-          <div className={styles.botContent}>
-            <h3> Share:</h3>
-            <ul>
-            <li>
-              <a
-                href={
-                  'https://www.facebook.com/sharer/sharer.php?u=' +
-                  baseUrl +
-                  pageContext.slug
-                }
-                className="facebook"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fab fa-facebook-f fa-2x" />
-              </a>
-            </li>
+          
+          <SocialShare baseUrl={baseUrl} pageContext={pageContext.slug} postTitle={post.frontmatter.title}/>
 
-            <li>
-            <a
-              href={
-                'https://twitter.com/share?url=' +
-                baseUrl +
-                pageContext.slug +
-                '&text=' +
-                post.title +
-                '&via' +
-                'twitterHandle'
-              }
-              className="twitter"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-twitter fa-2x" />
-            </a>
-          </li>
-
-          <li>
-            <a
-              href={
-                'https://www.linkedin.com/shareArticle?url=' +
-                baseUrl +
-                pageContext.slug
-              }
-              className="linkedin"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-linkedin fa-2x" />
-            </a>
-          </li>
-
-
-            </ul>
-            
-          </div>
           <Comments slug={post.fields.slug} comments={comments.edges} />
 
           
