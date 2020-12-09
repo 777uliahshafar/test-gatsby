@@ -1,7 +1,7 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
   </a>
 </p>
 <h1 align="center">
@@ -20,9 +20,8 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
     ```shell
     # create a new Gatsby site using the hello-world starter
-    gatsby new my-hello-world-starter https://github.com/gatsbyjs/gatsby-starter-hello-world
+    gatsby new my-hello-world-starter https://github.com/777uliahshafar/gatsbyBlogonline.git
     ```
-
 1.  **Start developing.**
 
     Navigate into your new site’s directory and start it up.
@@ -83,6 +82,23 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 12. **`README.md`**: A text file containing useful reference information about your project.
 
 ## 🎓 Learning Gatsby
+
+### Install Bootstrap Reactstrap
+1. Install reactstrap and Bootstrap from NPM in Project Directory. Reactstrap does not include Bootstrap CSS so this needs to be installed as well:
+    ```
+    npm install --save bootstrap
+    npm install --save reactstrap react react-dom
+    ```
+2. Import Bootstrap CSS in the src/index.js file:
+    ```
+    import 'bootstrap/dist/css/bootstrap.min.css'
+    ```
+3. Import required reactstrap components within src/App.js file or your custom component files:
+```
+import { Button } from 'reactstrap'
+```
+
+### More info
 
 Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
 
