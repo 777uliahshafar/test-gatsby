@@ -17,7 +17,7 @@
     "axios": "^1.7.2",
     "babel-plugin-styled-components": "^2.1.4",
     "bootstrap": "^5.3.3",
-    "gatsby": "^2.23.12",
+    "gatsby": "^5.14.0-next.4",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-sass": "^6.13.1",
@@ -31,10 +31,11 @@
     "gatsby-transformer-yaml": "^5.13.1",
     "lodash": "^4.17.21",
     "node-sass": "^9.0.0",
-    "react": "^16.4.2",
-    "react-dom": "^6.1.11",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "reactstrap": "^9.2.2",
-    "styled-components": "^6.1.11"
+    "styled-components": "^6.1.11",
+    "xxxx": "^3.0.4"
   },
   "devDependencies": {
     "prettier": "2.0.5"
