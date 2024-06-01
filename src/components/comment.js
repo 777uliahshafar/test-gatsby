@@ -1,26 +1,17 @@
-import React from 'react'
-import s from './_comments.module.scss'
+import React from "react"
+import { form } from "./_comments.module.scss"
 
-const Comments = (props) => {
+const Comments = props => {
   return (
     <div>
       <form
-        className={s.form}
+        className={form}
         method="POST"
         action="https://komentar-cepa.herokuapp.com/v2/entry/777uliahshafar/gatsbyBlogonline/master/comments"
       >
-        <input
-          name="fields[slug]"
-          type="hidden"
-          value={props.slug}
-        />
+        <input name="fields[slug]" type="hidden" value={props.slug} />
         <input name="fields[name]" type="text" placeholder="Name" required />
-        <input
-          name="fields[email]"
-          type="email"
-          placeholder="Email"
-          required
-        />
+        <input name="fields[email]" type="email" placeholder="Email" required />
         <textarea name="fields[message]" placeholder="Comment" required />
         <button type="submit">Submit Comment</button>
       </form>
@@ -37,8 +28,8 @@ const Comments = (props) => {
           </div>
         ))
       ) : (
-          <p>No comments yet.</p>
-        )}
+        <p>No comments yet.</p>
+      )}
     </div>
   )
 }
