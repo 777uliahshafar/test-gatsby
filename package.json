@@ -35,6 +35,7 @@
     "react-dom": "^18.3.1",
     "reactstrap": "^9.2.2",
     "styled-components": "^6.1.11",
+    "webpack-filter-warnings-plugin": "^1.2.1",
     "xxxx": "^3.0.4"
   },
   "devDependencies": {
