@@ -2,7 +2,7 @@ import React from "react"
 import { Card, CardBody, CardTitle } from "reactstrap"
 import { StaticQuery, graphql } from "gatsby"
 
-import { container } from "./_sidebar.module.scss"
+import { container, card } from "./_sidebar.module.scss"
 
 export default () => (
   <StaticQuery
@@ -31,7 +31,7 @@ export default () => (
     `}
     render={data => (
       <div className={container}>
-        <Card className={container.card}>
+        <Card className={card}>
           <CardBody>
             <CardTitle className="text-center">Featured Post</CardTitle>
             {data.allMarkdownRemark.edges.map(({ node }) => (
@@ -42,7 +42,7 @@ export default () => (
           </CardBody>
         </Card>
 
-        <Card className={container.card}>
+        <Card className={card}>
           <CardBody>
             <CardTitle>
               <h2>iklan</h2>

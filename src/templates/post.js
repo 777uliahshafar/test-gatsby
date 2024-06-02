@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import Title from "../components/title"
 import SocialShare from "../components/social-share"
 import Comments from "../components/comment.js"
-import { container } from "./_post.module.scss"
+import { container, topContent, content } from "./_post.module.scss"
 import { slugify } from "../util/utilityFunction.js"
 
 const SinglePost = ({ data, pageContext }) => {
@@ -15,7 +15,7 @@ const SinglePost = ({ data, pageContext }) => {
     <Layout>
       <div className={container}>
         <Title text={post.frontmatter.title}></Title>
-        <div className={container.topContent}>
+        <div className={topContent}>
           <div>{post.frontmatter.date}</div>
 
           <div>
@@ -43,7 +43,7 @@ const SinglePost = ({ data, pageContext }) => {
           }}
         ></div>
         <div
-          className={container.content}
+          className={content}
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
 

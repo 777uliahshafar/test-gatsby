@@ -1,5 +1,5 @@
 import React from "react"
-import { container } from "./_layout.module.scss"
+import { container, content } from "./_layout.module.scss"
 import Header from "./header.js"
 import Footer from "./footer.js"
 import Sidebar from "./sidebar"
@@ -18,7 +18,7 @@ export default ({ children }) => (
     <Header />
     <Nav />
 
-    <div className={container.content}>{children}</div>
+    <div className={content}>{children}</div>
 
     <Sidebar />
     <Footer>All rigth Reserved - 2024</Footer>
