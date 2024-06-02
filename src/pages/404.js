@@ -13,12 +13,3 @@ const NotFound = () => {
 }
 
 export default NotFound
-
-/* export default () => (
-  <div className={content}>
-    <h1 className={header}>Page not found</h1>
-    <p className={errorMessage}>
-      The page you are looking for does not exists.
-    </p>
-  </div>
-) */
