@@ -7,7 +7,7 @@ import { graphql } from "gatsby"
 
 const articlesList = props => {
   const articles = props.data.allMarkdownRemark.edges
-  const { currentPage, numberOfPages } = props.pageContext
+  const { currentPage } = props.pageContext
 
   return (
     <Layout>
@@ -24,10 +24,10 @@ const articlesList = props => {
           tags={node.frontmatter.tags}
         />
       ))}
-      <PaginationLinks
+      {/* <PaginationLinks
         currentPage={currentPage}
         numberOfPages={numberOfPages}
-      />
+      /> */}
     </Layout>
   )
 }
