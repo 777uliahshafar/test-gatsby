@@ -89,8 +89,10 @@ export default function IndexPage() {
         />
       ))}
       <div className={styles.container}>
-        <div className={styles.more}>
-          <Link to="/archive">Selengkapnya</Link>
+        <div className={styles.right}>
+          <div className={styles.more}>
+            <Link to="/archive">Selengkapnya</Link>
+          </div>
         </div>
       </div>
     </div>
