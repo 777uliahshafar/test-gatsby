@@ -37,7 +37,7 @@ import { has } from "lodash"
   )
 } */
 
-export default function ArchivePage() {
+export default function IndexPage() {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -46,7 +46,7 @@ export default function ArchivePage() {
         }
       }
 
-      allMarkdownRemark(sort: { frontmatter: { date: DESC } }, limit: 4) {
+      allMarkdownRemark(sort: { frontmatter: { date: DESC } }, limit: 2) {
         totalCount
         edges {
           node {
@@ -72,17 +72,18 @@ export default function ArchivePage() {
       }
     }
   `)
+
   const articles = data.allMarkdownRemark.edges
   const total = data.allMarkdownRemark.totalCount
 
   const currentPage = 1
-  const articlesPerPage = 4
+  const articlesPerPage = 2
   const nextPage = `${currentPage + 1}`
   const hasNextPage = total > articlesPerPage
 
   return (
     <div>
-      {articles.map(({ node }) => (
+      {data.allMarkdownRemark.edges.map(({ node }) => (
         <Article
           key={node.id}
           slug={node.fields.slug}
@@ -97,7 +98,7 @@ export default function ArchivePage() {
       {hasNextPage && (
         <div style={{ float: "right" }}>
           <Link to={nextPage}>
-            <span>Next Page</span>
+            <span>See All Post</span>
           </Link>
         </div>
       )}

@@ -3,6 +3,7 @@ const path = require("path")
 const { slugify } = require("./src/util/utilityFunction")
 const _ = require("lodash")
 const FilterWarningsPlugin = require("webpack-filter-warnings-plugin")
+const { paginate } = require("gatsby-awesome-pagination")
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   if (node.internal.type === "MarkdownRemark") {
@@ -59,7 +60,7 @@ exports.createPages = ({ graphql, actions }) => {
           if (isFirstPage) return
 
           createPage({
-            path: `/page/${currentPage}`,
+            path: index === 0 ? `/archive` : `/archive/${currentPage}`,
             component: path.resolve("./src/templates/articles-list.js"),
             context: {
               limit: articlesPerPage,

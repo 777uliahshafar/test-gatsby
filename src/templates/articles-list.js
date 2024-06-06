@@ -3,16 +3,25 @@ import Layout from "../components/layout"
 import Title from "../components/title"
 import Article from "../components/article"
 import PaginationLinks from "../components/pagination-links.js"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 
-const articlesList = props => {
-  const articles = props.data.allMarkdownRemark.edges
-  const { currentPage } = props.pageContext
+const articlesList = ({ pageContext, data }) => {
+  const { edges } = data.allMarkdownRemark
+
+  const { currentPage, numPages } = pageContext
+  const isFirst = currentPage === 1
+  const isLast = currentPage === numPages
+  const prevPage =
+    currentPage - 1 === 1 ? "/archive" : `/archive/${currentPage - 1}`
+  const nextPage = `/archive/${currentPage + 1}`
+
+  /*   const articles = props.data.allMarkdownRemark.edges
+  const { currentPage } = props.pageContext */
 
   return (
     <Layout>
       <Title text={`Page: ${currentPage}`}></Title>
-      {articles.map(({ node }) => (
+      {edges.map(({ node }) => (
         <Article
           key={node.id}
           slug={node.fields.slug}
@@ -24,10 +33,16 @@ const articlesList = props => {
           tags={node.frontmatter.tags}
         />
       ))}
-      {/* <PaginationLinks
-        currentPage={currentPage}
-        numberOfPages={numberOfPages}
-      /> */}
+      {!isFirst && (
+        <div style={{ float: "left" }}>
+          <Link to={prevPage}>&#8592; Previous Page</Link>
+        </div>
+      )}
+      {!isLast && (
+        <div style={{ float: "right" }}>
+          <Link to={nextPage}>Next Page &#8594;</Link>
+        </div>
+      )}
     </Layout>
   )
 }
