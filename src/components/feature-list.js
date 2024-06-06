@@ -1,8 +1,6 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
-import Article from "../components/article"
-import PaginationLinks from "../components/pagination-links.js"
-import { has } from "lodash"
+import Article from "./article.js"
 
 /* const IndexPage = () => {
 
@@ -74,16 +72,10 @@ export default function IndexPage() {
   `)
 
   const articles = data.allMarkdownRemark.edges
-  const total = data.allMarkdownRemark.totalCount
-
-  const currentPage = 1
-  const articlesPerPage = 2
-  const nextPage = `${currentPage + 1}`
-  const hasNextPage = total > articlesPerPage
 
   return (
     <div>
-      {data.allMarkdownRemark.edges.map(({ node }) => (
+      {articles.map(({ node }) => (
         <Article
           key={node.id}
           slug={node.fields.slug}
@@ -95,13 +87,9 @@ export default function IndexPage() {
           tags={node.frontmatter.tags}
         />
       ))}
-      {hasNextPage && (
-        <div style={{ float: "right" }}>
-          <Link to={nextPage}>
-            <span>See All Post</span>
-          </Link>
-        </div>
-      )}
+      <div style={{ float: "right" }}>
+        <Link to="/archive">Selengkapnya</Link>
+      </div>
     </div>
   )
 }

@@ -1,8 +1,8 @@
 import React from "react"
 import Layout from "../components/layout"
 import Title from "../components/title"
-/* import FeatureList from "../components/feature-list"
- */ import "bootstrap/dist/css/bootstrap.min.css"
+import FeatureList from "../components/feature-list"
+import "bootstrap/dist/css/bootstrap.min.css"
 
 export default () => (
   <Layout>
@@ -16,6 +16,6 @@ export default () => (
       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
       est laborum.
     </p>
-    {/*  <FeatureList /> */}
+    <FeatureList />
   </Layout>
 )
