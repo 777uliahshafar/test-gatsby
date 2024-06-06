@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Article from "./article.js"
+import * as styles from "./_feature-list.module.scss"
 
 /* const IndexPage = () => {
 
@@ -87,8 +88,10 @@ export default function IndexPage() {
           tags={node.frontmatter.tags}
         />
       ))}
-      <div style={{ float: "right" }}>
-        <Link to="/archive">Selengkapnya</Link>
+      <div className={styles.container}>
+        <div className={styles.more}>
+          <Link to="/archive">Selengkapnya</Link>
+        </div>
       </div>
     </div>
   )
