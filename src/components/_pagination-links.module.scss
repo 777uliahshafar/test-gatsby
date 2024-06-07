@@ -1,0 +1,70 @@
+@import "../styles/variable";
+
+.container {
+  grid-area: article;
+  width: 100%-$gutterdbl;
+  margin: 0.5rem $gutter;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "left right";
+  grid-template-rows: auto;
+
+  .left {
+    margin: 0.5rem $gutter;
+    grid-area: left;
+
+    .prev {
+      display: block;
+      border: 1px solid $secondaryColor;
+      border-radius: 0.5rem;
+      text-align: center;
+      margin-top: 1rem;
+      margin-right: 70%;
+      padding: 5px;
+      cursor: pointer;
+      background-color: $secondaryColor;
+      transition: all 0.25s ease;
+
+      a {
+        padding-right: 0.5rem;
+        margin: 0.5rem $gutter;
+        font-weight: $boldWeight;
+        color: $color-pallete-3;
+      }
+
+      &:hover {
+        background-color: $primaryColor;
+      }
+    }
+  }
+
+  .right {
+    grid-area: right;
+    padding: 0.5rem $gutter;
+    color: $color-pallete-3;
+
+    .next {
+      display: block;
+      border: 1px solid $secondaryColor;
+      border-radius: 0.5rem;
+      text-align: center;
+      margin-top: 1rem;
+      margin-left: 70%;
+      padding: 5px;
+      cursor: pointer;
+      background-color: $secondaryColor;
+      transition: all 0.25s ease;
+
+      a {
+        padding-right: 0.5rem;
+        margin: 0.5rem $gutter;
+        font-weight: $boldWeight;
+        color: $color-pallete-3;
+      }
+
+      &:hover {
+        background-color: $primaryColor;
+      }
+    }
+  }
+}
