@@ -14,9 +14,9 @@ export default function Nav() {
   return (
     <nav className={navContainer}>
       <div className={row}>
-        <NavLink to="/" text="Articles" />
-        <NavLink to="/about" text="About" />
-        <NavLink to="/tags" text="Tags" />
+        <NavLink to="/" text="Beranda" />
+        <NavLink to="/about" text="Tentang" />
+        <NavLink to="/tags" text="Label" />
       </div>
     </nav>
   )

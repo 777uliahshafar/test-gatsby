@@ -5,17 +5,17 @@
   width: $container-width;
   height: 100vh;
   margin: 0 auto;
-  padding-top: 0.5rem;
-  margin-top: 0.5rem;
+  padding-top: 2rem;
+  //margin-top: 0.5rem;
 
   .link {
     font-family: $defaultFont;
-    font-size: 17px;
+    font-size: 24px;
     font-weight: $boldWeight;
     display: block;
     text-align: center;
     margin: 0.5rem $gutter;
-    padding: 0.5rem;
+    padding: 1.5rem;
     background-color: $secondaryColor;
     border-radius: 0.5rem;
     color: $color-pallete-4;
