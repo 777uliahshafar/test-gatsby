@@ -2,8 +2,6 @@ import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Article from "../components/article"
 import * as styles from "./_feature-list.module.scss"
-import PaginationLinks from "../components/pagination-links.js"
-import { has } from "lodash"
 
 /* const IndexPage = () => {
 

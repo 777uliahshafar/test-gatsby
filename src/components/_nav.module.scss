@@ -1,56 +1,47 @@
-@import '../styles/variable.scss';
+@import "../styles/variable.scss";
 
 .nav-container {
-    grid-area: links;
-    width: $container-width;
-    height: 100vh;
-    margin: 0 auto;
-    padding-top: .5rem;
-    margin-top: .5rem;
-    
-    .link {
-    color: $primaryColor;
+  grid-area: links;
+  width: $container-width;
+  height: 100vh;
+  margin: 0 auto;
+  padding-top: 0.5rem;
+  margin-top: 0.5rem;
+
+  .link {
     font-family: $defaultFont;
     font-size: 17px;
     font-weight: $boldWeight;
     display: block;
     text-align: center;
-    margin: .5rem $gutter;
-    padding: .5rem;
+    margin: 0.5rem $gutter;
+    padding: 0.5rem;
     background-color: $secondaryColor;
-    border-radius: .5rem;
-    color: $primaryColor;
+    border-radius: 0.5rem;
+    color: $color-pallete-4;
 
     &:hover {
-        color: $color-pallete-2;
-      }
-  
-    } //end of link
-
-}//end of container
+      color: $color-pallete-2;
+    }
+  } //end of link
+} //end of container
 
 /*----------Medium Screen--------- */
 
 //35em is also 560px (if basefont is 16px)
 @media only screen and (min-width: 35em) {
   .nav-container {
-
     display: none;
-
   }
-  
-
-
-}//end of media query
+} //end of media query
 
 /*----------Large Screen--------- */
 //64em is also 1028px (if basefont is 16px)
 @media only screen and (min-width: 64em) {
-
   .nav-container {
     display: grid;
     grid-template-columns: repeat(12, 9rem);
-    height : auto;
+    height: auto;
     background-color: $primaryColor;
 
     .row {
@@ -59,13 +50,10 @@
       padding: 5px;
     }
 
-    .link{
-      display:inline;
-      color: $fontColor;
+    .link {
+      display: inline;
+      color: $color-pallete-4;
       background-color: transparent;
-      
     }
-
-  }//end of navContainer
-
+  } //end of navContainer
 } //end of media query
