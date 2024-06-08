@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 import { navContainer, link, row } from "./_nav.module.scss"
 
 //NavLink component
@@ -10,17 +10,28 @@ const NavLink = props => (
   </Link>
 )
 
-export default function Nav() {
+const Nav = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+
   return (
     <nav className={navContainer}>
       <div className={row}>
-        <NavLink to="/" text="Beranda" />
+        <NavLink to="/" text={data.site.siteMetadata.title} />
         <NavLink to="/about" text="Tentang" />
         <NavLink to="/tags" text="Label" />
       </div>
     </nav>
   )
 }
+export default Nav
 
 /* export default () => (
   <StaticQuery
