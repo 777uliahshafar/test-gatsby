@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Article from "../components/article"
+import * as styles from "./_feature-list.module.scss"
 import PaginationLinks from "../components/pagination-links.js"
 import { has } from "lodash"
 
@@ -95,10 +96,14 @@ export default function ArchivePage() {
         />
       ))}
       {hasNextPage && (
-        <div style={{ float: "right" }}>
-          <Link to={nextPage}>
-            <span>Next Page</span>
-          </Link>
+        <div className={styles.container}>
+          <div className={styles.right}>
+            <div className={styles.more}>
+              <Link to={nextPage}>
+                <span>Next Page &#8594;</span>
+              </Link>
+            </div>
+          </div>
         </div>
       )}
     </div>
