@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
-import { navContainer, link, row } from "./_nav.module.scss"
+import { navContainer, link, brand, row } from "./_nav.module.scss"
 
 //NavLink component
 
@@ -23,8 +23,10 @@ const Nav = () => {
 
   return (
     <nav className={navContainer}>
-      <div className={row}>
+      <div className={brand}>
         <NavLink to="/" text={data.site.siteMetadata.title} />
+      </div>
+      <div className={row}>
         <NavLink to="/about" text="Tentang" />
         <NavLink to="/tags" text="Label" />
       </div>

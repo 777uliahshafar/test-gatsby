@@ -40,13 +40,21 @@
 @media only screen and (min-width: 64em) {
   .nav-container {
     display: grid;
-    grid-template-columns: repeat(12, 9rem);
+    grid-template-columns: 2fr 1fr 3fr;
+    grid-template-areas: "brand space text";
     height: auto;
     background-color: $primaryColor;
 
+    .brand {
+      grid-area: brand;
+      text-align: left;
+      padding: 5px;
+    }
+
     .row {
+      grid-area: text;
       width: auto;
-      text-align: center;
+      text-align: right;
       padding: 5px;
     }
 
