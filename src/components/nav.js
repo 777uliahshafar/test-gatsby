@@ -29,6 +29,7 @@ const Nav = () => {
       <div className={row}>
         <NavLink to="/about" text="Tentang" />
         <NavLink to="/tags" text="Label" />
+        <NavLink to="/tags" text="Label" />
       </div>
     </nav>
   )
