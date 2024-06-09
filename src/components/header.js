@@ -40,7 +40,31 @@ const SocialButton = props => {
   )
 }
 
-export default () => (
+const Header = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+  return (
+    <header className={container}>
+      <div className={row}>
+        <HomeButton to="/" text={data.site.siteMetadata.title} />
+        <SocialButton site="github" username="evangeloper"></SocialButton>
+        <SocialButton site="linkedin" username="evangeloper"></SocialButton>
+        <SocialButton site="twitter" username="evangeloper"></SocialButton>
+      </div>
+    </header>
+  )
+}
+
+export default Header
+
+/* export default () => (
   <StaticQuery
     query={graphql`
       query {
@@ -63,3 +87,4 @@ export default () => (
     )}
   />
 )
+ */

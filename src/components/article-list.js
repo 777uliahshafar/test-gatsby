@@ -36,7 +36,7 @@ import * as styles from "./_feature-list.module.scss"
   )
 } */
 
-export default function ArchivePage() {
+const ArchivePage = () => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -107,6 +107,8 @@ export default function ArchivePage() {
     </div>
   )
 }
+
+export default ArchivePage
 
 /* = graphql`
   query {

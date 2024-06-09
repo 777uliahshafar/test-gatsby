@@ -36,7 +36,7 @@ import * as styles from "./_feature-list.module.scss"
   )
 } */
 
-export default function IndexPage() {
+const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -98,6 +98,8 @@ export default function IndexPage() {
     </div>
   )
 }
+
+export default IndexPage
 
 /* = graphql`
   query {
