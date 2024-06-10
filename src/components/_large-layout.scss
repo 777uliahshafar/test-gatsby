@@ -11,3 +11,16 @@
   padding: 10px;
   border: solid 1px #ccc;
 }
+
+.single-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 4rem auto 6rem;
+  grid-template-areas:
+    "links links"
+    "article article"
+    "footer footer";
+  margin: 0;
+  padding: 10px;
+  border: solid 1px #ccc;
+}

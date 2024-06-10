@@ -1,12 +1,12 @@
 import React from "react"
-import Layout from "../components/layout"
+import MainLayout from "../components/main-layout"
 import Title from "../components/title"
 import FeatureList from "../components/feature-list"
 import "bootstrap/dist/css/bootstrap.min.css"
 
 const Home = () => {
   return (
-    <Layout>
+    <MainLayout>
       <Title text="Welcome" />
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -18,7 +18,7 @@ const Home = () => {
         mollit anim id est laborum.
       </p>
       <FeatureList />
-    </Layout>
+    </MainLayout>
   )
 }
 export default Home
