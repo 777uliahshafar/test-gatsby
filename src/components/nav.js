@@ -35,27 +35,3 @@ const Nav = () => {
   )
 }
 export default Nav
-
-/* export default () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
-      <nav className={navContainer}>
-        <div className={row}>
-          <NavLink to="/" text="Articles" />
-          <NavLink to="/about" text="About" />
-          <NavLink to="/tags" text="Tags" />
-        </div>
-      </nav>
-    )}
-  />
-)
- */
