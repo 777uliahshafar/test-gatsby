@@ -1,0 +1,65 @@
+@import "../styles/variable.scss";
+
+.slide-container {
+  grid-area: slide;
+  width: $container-width;
+  display: none;
+  height: 100vh;
+  margin: 0 auto;
+  padding-top: 0.5rem;
+
+  .link {
+    font-family: $defaultFont;
+    font-size: 21px;
+    font-weight: $boldWeight;
+    display: block;
+    text-align: center;
+    margin: 0.5rem $gutter;
+    padding: 1.5rem;
+    background-color: $secondaryColor;
+    border-radius: 0.5rem;
+    color: $primaryColor;
+
+    &:hover {
+      color: $color-pallete-2;
+    }
+  } //end of link
+} //end of container
+
+/*----------Medium Screen--------- */
+
+//35em is also 560px (if basefont is 16px)
+@media only screen and (min-width: 35em) {
+  .slide-container {
+    display: none;
+  }
+} //end of media query
+
+/*----------Large Screen--------- */
+//64em is also 1028px (if basefont is 16px)
+@media only screen and (min-width: 64em) {
+  .slide-container {
+    display: grid;
+    height: auto;
+    //background-color: $primaryColor;
+
+    .brand {
+      grid-area: brand;
+      text-align: left;
+      padding: 5px;
+    }
+
+    .row {
+      grid-area: text;
+      width: auto;
+      text-align: right;
+      padding: 5px;
+    }
+
+    .link {
+      display: inline;
+      color: $color-pallete-4;
+      background-color: transparent;
+    }
+  } //end of navContainer
+} //end of media query

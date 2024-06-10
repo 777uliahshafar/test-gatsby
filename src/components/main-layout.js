@@ -3,6 +3,7 @@ import { singleContainer, singleContent } from "./_layout.module.scss"
 import Footer from "./footer.js"
 import Nav from "./nav"
 import App from "./app"
+import Slide from "./slide"
 
 const MainLayout = ({ children }) => {
   return (
@@ -15,6 +16,7 @@ const MainLayout = ({ children }) => {
       />
       <App />
       <Nav />
+      <Slide />
       <div className={singleContent}>{children}</div>
 
       <Footer>All rigth Reserved - 2024</Footer>
