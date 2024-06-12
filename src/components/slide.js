@@ -23,8 +23,9 @@ const Slide = () => {
       <ImageGallery
         items={images}
         showPlayButton={false}
+        showNav={false}
         showFullscreenButton={false}
-        slideInterval={8000}
+        slideInterval={12000}
         autoPlay={true}
       />
     </div>
