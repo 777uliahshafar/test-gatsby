@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
-import Article from "./article.js"
+import Info from "./info.js"
 import * as styles from "./_feature-list.module.scss"
 
 const IndexPage = () => {
@@ -44,7 +44,7 @@ const IndexPage = () => {
   return (
     <div>
       {articles.map(({ node }) => (
-        <Article
+        <Info
           key={node.id}
           slug={node.fields.slug}
           keyword={node.frontmatter.keyword}

@@ -7,8 +7,8 @@ import "bootstrap/dist/css/bootstrap.min.css"
 const Home = () => {
   return (
     <MainLayout>
-      <Title text="Welcome" />
-      <p>
+      <Title text="Informasi" />
+      {/* <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -16,7 +16,7 @@ const Home = () => {
         velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
-      </p>
+      </p> */}
       <FeatureList />
     </MainLayout>
   )
